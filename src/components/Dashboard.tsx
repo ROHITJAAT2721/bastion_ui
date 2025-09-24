@@ -72,8 +72,7 @@ const Dashboard: React.FC<DashboardProps> = ({ appState, setAppState }) => {
   };
 
   return (
-    <>
-      <div className="dashboard">
+    <div className="dashboard">
       <header className="dashboard-header">
         <Link to="/" className="back-link">
           ← Back to Home
@@ -146,9 +145,9 @@ const Dashboard: React.FC<DashboardProps> = ({ appState, setAppState }) => {
           </div>
         </div>
       </div>
-      </div>
-      
-      <footer className="dashboard-footer">
+    </div>
+    
+    <footer className="dashboard-footer">
       <div className="footer-content">
         <div className="footer-left">
           <div className="footer-logo">
@@ -168,8 +167,7 @@ const Dashboard: React.FC<DashboardProps> = ({ appState, setAppState }) => {
           <p className="footer-copyright">&copy; 2025 Bastion Protocol</p>
         </div>
       </div>
-      </footer>
-    </>
+    </footer>
   );
 };
 
