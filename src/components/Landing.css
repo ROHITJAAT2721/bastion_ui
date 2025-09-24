@@ -64,6 +64,23 @@
   margin-bottom: 40px;
 }
 
+.logo-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  animation: logoFloat 3s ease-in-out infinite;
+}
+
+.logo-icon svg {
+  color: #FFC107;
+  filter: drop-shadow(0 4px 8px rgba(255, 193, 7, 0.3));
+}
+
+@keyframes logoFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
 .logo {
   font-size: clamp(3rem, 8vw, 6rem);
   font-weight: 800;

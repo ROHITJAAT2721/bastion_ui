@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Shield } from 'lucide-react';
 import { AppState, Loan, Circle } from '../App';
 import StakeSection from './StakeSection';
 import LendSection from './LendSection';
@@ -77,7 +78,10 @@ const Dashboard: React.FC<DashboardProps> = ({ appState, setAppState }) => {
         <Link to="/" className="back-link">
           ← Back to Home
         </Link>
-        <h1>Bastion Protocol</h1>
+        <div className="header-logo">
+          <Shield size={32} />
+          <h1>Bastion Protocol</h1>
+        </div>
       </header>
 
       <div className="dashboard-content">
