@@ -1,0 +1,203 @@
+.landing {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1E1E1E 0%, #2A1810 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, rgba(255, 193, 7, 0.3), transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(255, 152, 0, 0.2), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(255, 193, 7, 0.4), transparent);
+  background-repeat: repeat;
+  background-size: 200px 100px;
+  animation: float 20s infinite linear;
+}
+
+.wave-background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to top, rgba(255, 193, 7, 0.1), transparent);
+  animation: wave 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateX(0) translateY(0); }
+  100% { transform: translateX(-200px) translateY(-100px); }
+}
+
+@keyframes wave {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-20px) rotate(1deg); }
+  75% { transform: translateY(20px) rotate(-1deg); }
+}
+
+.landing-content {
+  text-align: center;
+  max-width: 800px;
+  z-index: 10;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+
+.landing-content.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.logo-section {
+  margin-bottom: 40px;
+}
+
+.logo {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, #FFC107, #FF9800, #FFC107);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s ease-in-out infinite;
+  margin-bottom: 16px;
+}
+
+.tagline {
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+@keyframes shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.description {
+  margin: 40px 0;
+  padding: 0 20px;
+}
+
+.description p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin: 60px 0;
+  width: 100%;
+}
+
+.feature {
+  background: rgba(42, 42, 42, 0.6);
+  padding: 30px 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 193, 7, 0.2);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 193, 7, 0.5);
+  box-shadow: 0 20px 40px rgba(255, 193, 7, 0.1);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  filter: grayscale(0.3);
+}
+
+.feature h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: #FFC107;
+}
+
+.feature p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.cta-link {
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 40px;
+}
+
+.cta-button {
+  padding: 18px 40px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.cta-button:hover::before {
+  left: 100%;
+}
+
+.button-arrow {
+  margin-left: 12px;
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover .button-arrow {
+  transform: translateX(6px);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .landing {
+    padding: 20px 15px;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 40px 0;
+  }
+  
+  .feature {
+    padding: 24px 16px;
+  }
+  
+  .description {
+    margin: 30px 0;
+    padding: 0 10px;
+  }
+}
