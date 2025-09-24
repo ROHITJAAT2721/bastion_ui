@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Shield } from 'lucide-react';
 import { AppState, Loan, Circle } from '../App';
 import StakeSection from './StakeSection';
 import LendSection from './LendSection';
@@ -79,7 +78,7 @@ const Dashboard: React.FC<DashboardProps> = ({ appState, setAppState }) => {
           ← Back to Home
         </Link>
         <div className="header-logo">
-          <Shield size={32} />
+          <img src="/WhatsApp Image 2025-09-24 at 20.34.23 copy.png" alt="Bastion Protocol Logo" className="header-logo-image" />
           <h1>Bastion Protocol</h1>
         </div>
       </header>

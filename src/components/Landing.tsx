@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Shield } from 'lucide-react';
 import './Landing.css';
 
 const Landing: React.FC = () => {
@@ -18,7 +17,7 @@ const Landing: React.FC = () => {
       <div className={`landing-content ${isLoaded ? 'loaded' : ''}`}>
         <div className="logo-section">
           <div className="logo-icon">
-            <Shield size={64} />
+            <img src="/WhatsApp Image 2025-09-24 at 20.34.23 copy.png" alt="Bastion Protocol Logo" className="logo-image" />
           </div>
           <h1 className="logo">Bastion Protocol</h1>
           <p className="tagline">Decentralized Lending Reimagined</p>
