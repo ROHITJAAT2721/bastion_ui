@@ -146,28 +146,6 @@ const Dashboard: React.FC<DashboardProps> = ({ appState, setAppState }) => {
         </div>
       </div>
     </div>
-    
-    <footer className="dashboard-footer">
-      <div className="footer-content">
-        <div className="footer-left">
-          <div className="footer-logo">
-            <img src="/WhatsApp Image 2025-09-24 at 20.34.23 copy.png" alt="Bastion Protocol Logo" className="footer-logo-image" />
-            <span>Bastion Protocol</span>
-          </div>
-          <p>Decentralized Lending Reimagined</p>
-        </div>
-        <div className="footer-right">
-          <div className="footer-links">
-            <a href="https://github.com/bastion-protocol/bastion" target="_blank" rel="noopener noreferrer">
-              GitHub
-            </a>
-            <a href="#" onClick={(e) => e.preventDefault()}>Documentation</a>
-            <a href="#" onClick={(e) => e.preventDefault()}>Community</a>
-          </div>
-          <p className="footer-copyright">&copy; 2025 Bastion Protocol</p>
-        </div>
-      </div>
-    </footer>
   );
 };
 
